@@ -348,3 +348,354 @@
   <script src="javascript.js"></script>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software Department GPA Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background picture -->
+  <div class="background"></div>
+
+  <header class="header">
+    <img src="https://imgur.com/CWXJqTF.png" alt="Left Logo" class="logo left" />
+    <h1 class="calculator-title">Software Department GPA Calculator</h1>
+    <img src="https://imgur.com/woCEzNo.png" alt="Right Logo" class="logo right" />
+    <p class="subheading">For All Semesters</p>
+  </header>
+
+
+  
+  <!-- 1st Semester -->
+ <div class="semester" id="semester1">
+  <div class="semester">
+    <h2>1st Semester</h2>
+    <div class="course hidden">
+      <label for="MTH108">Applied Calculus:</label>
+      <input type="text" id="MTH108" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW112">Programming Fundamentals:</label>
+      <input type="text" id="SW112" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW113">Introduction to Info. & Comm. Technologies:</label>
+      <input type="text" id="SW113" class="grade" data-credit-hours="2" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="ENG111">Functional English:</label>
+      <input type="text" id="ENG111" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="EL119">Applied Physics:</label>
+      <input type="text" id="EL119" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="PF Practical">PF Practical:</label>
+      <input type="text" id="PF Practical" class="grade" data-credit-hours="1" placeholder="Grade">
+    </div>
+<div class="course hidden">
+      <label for="IICT Practical">IICT Practical:</label>
+      <input type="text" id="IICT Practical" class="grade" data-credit-hours="1" placeholder="Grade">
+    </div>
+  </div>
+  <button onclick="toggleVisibility('semester1')">See more</button>
+  <button id="calculateSemester1">Calculate GPA</button>
+  <button onclick="resetSemester('semester1')">RESET</button>
+</div>
+<!-- 2nd Semester -->
+<div class="semester" id="semester2">
+  <div class="semester">
+    <h2>2nd Semester</h2>
+   <div class="course hidden">
+      <label for="SW121">Object Oriented Programming:</label>
+      <input type="text" id="SW121" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW123">Professional Practices:</label>
+      <input type="text" id="SW123" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="MTH112">Linear Algebra & Analytical Geometry:</label>
+      <input type="text" id="MTH112" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW124">Introduction to Software Engineering:</label>
+      <input type="text" id="SW124" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="PS106">Pakistan Studies:</label>
+      <input type="text" id="PS106" class="grade" data-credit-hours="2" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="IS111">Islamic Studies / Ethics:</label>
+      <input type="text" id="IS111" class="grade" data-credit-hours="2" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="OOP Practical">OOP Practical:</label>
+      <input type="text" id="Practical2" class="grade" data-credit-hours="1" placeholder="Grade">
+    </div>
+  </div>
+  <button onclick="toggleVisibility('semester2')">See more</button>
+  <button id="calculateSemester2">Calculate GPA</button>
+<button onclick="resetSemester('semester2')">RESET</button>
+</div>
+
+  <!-- Repeat similar blocks for other semesters -->
+<!-- 3rd Semester -->
+<div class="semester" id="semester3">
+  <div class="semester">
+    <h2>3rd Semester</h2>
+    <div class="course hidden">
+      <label for="SW212">Data Structures & Algorithms:</label>
+      <input type="text" id="SW212" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW215">Database Systems:</label>
+      <input type="text" id="SW215" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW216">Software Requirements Engineering:</label>
+      <input type="text" id="SW216" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW211">Software Economics & Management:</label>
+      <input type="text" id="SW211" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="SW217">Operations Research:</label>
+      <input type="text" id="SW217" class="grade" data-credit-hours="3" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="Practical3">Practical (DSA SW212):</label>
+      <input type="text" id="Practical3" class="grade" data-credit-hours="1" placeholder="Grade">
+    </div>
+    <div class="course hidden">
+      <label for="Practical4">Practical (DBS SW215):</label>
+      <input type="text" id="Practical4" class="grade" data-credit-hours="1" placeholder="Grade">
+    </div>
+  </div>
+  <button onclick="toggleVisibility('semester3')">See more</button>
+  <button id="calculateSemester3">Calculate GPA</button>
+  <button onclick="resetSemester('semester3')">RESET</button>
+</div>
+<!-- 4th Semester -->
+<div class="semester" id="semester4">
+  <div class="semester">
+    <h2>4th Semester</h2> 
+ <div class="course hidden">
+    <label for="SW225">Operating Systems:</label>
+    <input type="text" id="SW225" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW226">Computer Networks:</label>
+    <input type="text" id="SW226" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW227">Software Design & Architecture:</label>
+    <input type="text" id="SW227" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW228">Data Warehousing:</label>
+    <input type="text" id="SW228" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="ENG201">Communication Skills:</label>
+    <input type="text" id="ENG201" class="grade" data-credit-hours="2" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical5">Practical (OS SW225):</label>
+    <input type="text" id="Practical5" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical6">Practical (CN SW226):</label>
+    <input type="text" id="Practical6" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical7">Practical (SDA SW227):</label>
+    <input type="text" id="Practical7" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+</div>
+  <button onclick="toggleVisibility('semester4')">See more</button>
+  <button id="calculateSemester4">Calculate GPA</button>
+  <button onclick="resetSemester('semester4')">RESET</button>
+</div>
+
+<!-- 5th Semester -->
+<div class="semester" id="semester5">
+  <div class="semester">
+    <h2>5th Semester</h2> 
+  <div class="course hidden">
+    <label for="SW315">Software Construction and Development:</label>
+    <input type="text" id="SW315" class="grade" data-credit-hours="2" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="MTH317">Statistics & Probability:</label>
+    <input type="text" id="MTH317" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW316">Information Security:</label>
+    <input type="text" id="SW316" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW317">Human-computer Interaction:</label>
+    <input type="text" id="SW317" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW318">Agent-based Intelligent Systems:</label>
+    <input type="text" id="SW318" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="ENG311">Introduction to Entrepreneurship & Creativity :</label>
+    <input type="text" id="ENT321" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical8">Practical (SCD SW315):</label>
+    <input type="text" id="Practical8" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  
+</div>
+  <button onclick="toggleVisibility('semester5')">See more</button>
+  <button id="calculateSemester5">Calculate GPA</button>
+  <button onclick="resetSemester('semester5')">RESET</button>
+</div>
+
+<!-- 6th Semester -->
+<div class="semester" id="semester6">
+  <div class="semester">
+    <h2>6th Semester</h2> 
+  <div class="course hidden">
+    <label for="SW322">Software Project Management:</label>
+    <input type="text" id="SW322" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW325">Discrete Structures:</label>
+    <input type="text" id="SW325" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="ENG319">Technical & Business Writing:</label>
+    <input type="text" id="ENG301" class="grade" data-credit-hours="2" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW326">Data Science and Analytics:</label>
+    <input type="text" id="SW326" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW327">Mobile Application Development:</label>
+    <input type="text" id="SW327" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  
+  
+  <div class="course hidden">
+    <label for="Practical12">Practical (DSA SW326):</label>
+    <input type="text" id="Practical12" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical13">Practical (MAD SW327):</label>
+    <input type="text" id="Practical13" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+</div>
+  <button onclick="toggleVisibility('semester6')">See more</button>
+  <button id="calculateSemester6">Calculate GPA</button>
+  <button onclick="resetSemester('semester6')">RESET</button>
+</div>
+
+
+
+<!-- 7th Semester -->
+<div class="semester" id="semester7">
+  <div class="semester">
+    <h2>7th Semester</h2> 
+  <div class="course hidden">
+    <label for="SW415">Software Re-engineering:</label>
+    <input type="text" id="SW415" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW416">Multimedia Communication:</label>
+    <input type="text" id="SW416" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW417">Web Engineering:</label>
+    <input type="text" id="SW417" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW418">Formal Methods in Software Engineering:</label>
+    <input type="text" id="SW418" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  
+  
+  <div class="course hidden">
+    <label for="Practical15">Practical (MC SW416):</label>
+    <input type="text" id="Practical15" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical16">Practical (WB SW417):</label>
+    <input type="text" id="Practical16" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+ <div class="course hidden">
+    <label for="Practical17">Final Year Project 1: SW498:</label>
+    <input type="text" id="Practical17" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+</div>
+  <button onclick="toggleVisibility('semester7')">See more</button>
+  <button id="calculateSemester7">Calculate GPA</button>
+  <button onclick="resetSemester('semester7')">RESET</button>
+</div>
+
+<!-- 8th Semester -->
+<div class="semester" id="semester8">
+  <div class="semester">
+    <h2>8th Semester</h2> 
+  <div class="course hidden">
+    <label for="SW424">Simulation & Modeling:</label>
+    <input type="text" id="SW424" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW425">Cloud Computing:</label>
+    <input type="text" id="SW425" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="SW426">Software Quality Engineering:</label>
+    <input type="text" id="SW426" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+  
+  
+  <div class="course hidden">
+    <label for="Practical19">Practical (CC SW425):</label>
+    <input type="text" id="Practical19" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical20">Practical (SQE SW426):</label>
+    <input type="text" id="Practical20" class="grade" data-credit-hours="1" placeholder="Grade">
+  </div>
+  <div class="course hidden">
+    <label for="Practical21">Final Year Project 2 SW499:</label>
+    <input type="text" id="Practical21" class="grade" data-credit-hours="3" placeholder="Grade">
+  </div>
+</div>
+  <button onclick="toggleVisibility('semester8')">See more</button>
+  <button id="calculateSemester8">Calculate GPA</button>
+  <button onclick="resetSemester('semester8')">RESET</button>
+</div>
+   <button id="calculate" style="position: center; top: 50%; transform: translateY(-50%); right: 10px;">
+    Calculate Overall GPA
+  </button>
+  <div id="result"></div>
+  <button onclick="resetAll()" style="position: center; top: 50%; transform: translateY(-50%); right: 10px;">
+    RESET ALL
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by: ZAHEER AHMED 👨‍💻 | Roll NO: 22SW077 🎓 | Department: Software Engineering 💻 | Contact: Za5528788@gmail.com 📧</p>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="javascript.js"></script>
+</body>
+</html>
